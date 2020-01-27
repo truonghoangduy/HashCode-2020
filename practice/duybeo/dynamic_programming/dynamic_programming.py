@@ -61,12 +61,13 @@ def _knapback(items:List[Item],max_capacity:int):
             pass
         pass
 
+    #counting the total slide that program could taken 
     for target_list in __result__:
         __totalOfSlide+=target_list.pizza_slide
         pass
     pass
 
-    print("Final Anser  : has "+str(__totalOfSlide))
+    print("Final Anser  : only can take "+str(__totalOfSlide))
     print(__result__)
 
 
@@ -80,12 +81,13 @@ if __name__ == "__main__":
     PIZZAS: List[Item]=[]
     #------------------
     
-    #You can send a problem file to it with .in 
-    #OR using the code own dictionnary within 4 example
-    # Un command this line
-    problem=open(file_dict["big"],"r")
-    #--------------------------------------
+    #You can send a problem file to it with .in => Uncomment the bellow line 🤣🤣
     # problem=open(glob.glob("*.in")[0],"r")
+    #OR using the code own dictionnary within 4 example 😁😁
+    # Un command this line
+    problem=open(file_dict["medium"],"r")
+    #--------------------------------------
+    
 
 
     problem_maxslide=int(problem.readline().rstrip('\n').split(" ")[0]);
@@ -93,7 +95,6 @@ if __name__ == "__main__":
 
     problem_pizzas=problem.readline().rstrip('\n').split(" ")
     
-    # print(problem_pizzas)
 
     for i,pizza in enumerate(problem_pizzas):
         PIZZAS.append(Item(int(i),int(pizza)))
